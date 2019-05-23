@@ -400,11 +400,11 @@ section {
 /*IFRAME SCALE ANIMATION SOUND 10*/
 
 
-/*
+
 .sound10 iframe {
     animation: schalen 43.5s forwards;
 }
-*/
+
 
 @keyframes schalen {
     0% {
