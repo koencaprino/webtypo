@@ -1,0 +1,762 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* **********************************************
+Basic mechanics
+Hide all paragraphs by default
+Show them when they receive the class 'on'
+Hide them when they receive the class 'off'
+Feel free to adjust the defaults to your needs.
+********************************************** */
+
+body {
+    background-color: black;
+}
+
+section {
+    padding-top: 3em;
+}
+
+#video-placeholder {
+    margin: auto;
+    display: flex;
+}
+
+#closed-captions {
+    display: flex;
+    justify-content: space-around;
+}
+
+#closed-captions p {
+    opacity: 0;
+    transition: .05s;
+    position: absolute;
+    width: 60%;
+    line-height: 1;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#closed-captions .on {
+    opacity: 1;
+}
+
+#closed-captions .off {
+    transition: .2s;
+    opacity: 0;
+}
+
+
+/*VOICES ----------------------------------------*/
+
+
+/*VOICE - 1 ---------*/
+
+.voice1 {
+    font-family: "Brenner Mono Regular";
+    font-size: 20px;
+    color: white;
+    /*    animation: glitch 6s infinite ease;*/
+}
+
+
+/*
+@keyframes gltich {
+    0% {
+        text-shadow: -5px 0px 5px #159BCE;
+    }
+    20% {
+        text-shadow: 5px 0px 5px #CE0B78;
+    }
+    40% {
+        text-shadow: -5px 0px 5px #159BCE;
+    }
+    60% {
+        text-shadow: 5px 0px 5px #CE0B78;
+    }
+    80% {
+        text-shadow: -5px 0px 5px #159BCE;
+    }
+    100% {
+        text-shadow: 5px 0px 5px #CE0B78;
+    }
+}
+*/
+
+
+/*VOICE - 2 ---------*/
+
+.voice2 {
+    font-family: "Brenner Sans Light";
+    color: white;
+    letter-spacing: 0.4px;
+    font-size: 20px;
+}
+
+
+/*VOICE - 3 ---------*/
+
+.voice3 {
+    font-family: "Brenner Mono Bold";
+    font-size: 3.5em;
+    font-weight: 600;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+    color: red;
+    top: 190px
+}
+
+
+/*VOICE - 4 ---------*/
+
+.voice4 {
+    font-family: "Brenner Sans Condensed light";
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.p0 span:nth-child(5) {
+    font-weight: 300;
+}
+
+
+/*------------------SOUNDS-----------------------*/
+
+.sound0 {
+    animation: sound0 17s ease forwards;
+}
+
+
+/*SOUND0 ---------------------*/
+
+@-webkit-keyframes sound0 {
+    0% {
+        background-color: black;
+    }
+    10% {
+        background-color: #303030;
+    }
+    20% {
+        background-color: black;
+    }
+    30% {
+        background-color: #303030;
+    }
+    40% {
+        background-color: black;
+    }
+    50% {
+        background-color: #303030;
+    }
+    60% {
+        background-color: black;
+    }
+    70% {
+        background-color: #303030;
+    }
+    80% {
+        background-color: black;
+    }
+    90% {
+        background-color: #303030;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+
+/*SOUND1 RODE GLOED---------------------*/
+
+.sound1 iframe {
+    animation: buzzer 1.1s ease-out;
+}
+
+@-webkit-keyframes buzzer {
+    0% {}
+    10% {
+        box-shadow: 0px 0px 69px 16px rgba(229, 0, 0, 0.81);
+        border: 10px solid red;
+    }
+    90% {
+        width: 650px;
+        height: 450px;
+        /*        box-shadow: 0 0 0 5px yellow, 0 0 0 10px black, 0 0 0 15px yellow, 0 0 0 20px black, 0 0 0 25px yellow;*/
+        box-shadow: 0px 0px 69px 16px rgba(229, 0, 0, 0.81);
+        border: 5px solid red;
+    }
+    100% {
+        width: 600px;
+        height: 400px;
+        transform: scale(5%)
+    }
+}
+
+.sound2 iframe {
+    animation: sirene 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes sirene {
+    0% {
+        transform: translateY(0px);
+    }
+    80% {
+        transform: translateY(200px);
+        box-shadow: 0px -20px 17px -6px rgba(17, 0, 255, 1);
+    }
+    0% {
+        transform: translateY(0px);
+    }
+}
+
+
+/*SOUND3 IFRAME SPIN---------------------*/
+
+.sound3 iframe {
+    animation: spin 0.6s ease 0.5s both;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+
+/*BACKGROUND SCAN ANIMATION SOUND 3*/
+
+.sound4 .scan {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    border: 2px solid chartreuse;
+    animation: scan 2s linear forwards;
+    animation-delay: .4s;
+}
+
+@keyframes scan {
+    0% {
+        top: 0vh;
+        box-shadow: 0px 0px 30px 20px rgba(127, 255, 2, 0.70);
+    }
+    50% {
+        box-shadow: 0px 0px 30px 0px rgba(127, 255, 2, 0.70);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        top: 100vh;
+        box-shadow: 0px 0px 30px 20px rgba(127, 255, 2, 0.70);
+        opacity: 0;
+    }
+}
+
+.sound11 iframe {
+    animation: glow s ease-out;
+}
+
+
+/*IFRAME SCALE ANIMATION SOUND 10*/
+
+
+/*
+.sound10 iframe {
+    animation: schalen 43.5s forwards;
+}
+*/
+
+@keyframes schalen {
+    0% {
+        transform: scale(1, 1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    99% {
+        transform: scale(0.7, 0.7)
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+/*CELLS ANIMATION SOUND 6 - 11*/
+
+footer {
+    opacity: 0;
+    margin: 100px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sound6 footer {
+    animation: cells 4s forwards;
+}
+
+.cell1,
+.cell2,
+.cell3,
+.cell4,
+.cell5 {
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    box-shadow: 0px 0px 10px 2px white, 0px 0px 12px 2px purple;
+    /*    animation: cells 5s infinite;*/
+}
+
+@keyframes cells {
+    0% {
+        opacity: 0;
+    }
+    24% {
+        opacity: 1;
+    }
+    32% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    67% {
+        opacity: 0;
+    }
+    82% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.sound11 footer {
+    animation: cells1 .8s forwards;
+}
+
+@keyframes cells1 {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.sound13 footer {
+    animation: cells2 .8s forwards;
+}
+
+@keyframes cells2 {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.sound14 footer {
+    animation: cells3 .8s forwards;
+}
+
+@keyframes cells3 {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.sound15 footer {
+    animation: cells4 .8s forwards;
+}
+
+@keyframes cells4 {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*INTERLINKED ANIMATION SOUND */
+
+article {
+    display: flex;
+    padding-top: 6.2em;
+    text-align: center;
+}
+
+
+/*
+.sound16 article {
+    animation: interlinked 0.7s forwards;
+}
+
+@keyframes interlinked {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+
+
+/*BACKGROUND SCAN ANIMATION SOUND 5*/
+
+.sound7 .scan {
+    animation: scan2 2s linear forwards;
+    animation-delay: .5s;
+    left: 0px;
+    height: 100vh;
+    /*    border: 2px solid chartreuse;*/
+    width: 2px;
+    color: chartreuse;
+}
+
+@keyframes scan2 {
+    0% {
+        left: 0vw;
+        box-shadow: 0px 0px 30px 20px rgba(127, 255, 2, 0.70);
+    }
+    50% {
+        box-shadow: 0px 0px 30px 0px rgba(127, 255, 2, 0.70);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: 100vw;
+        box-shadow: 0px 0px 30px 20px rgba(127, 255, 2, 0.70);
+        opacity: 0;
+    }
+}
+
+
+/*BACKGROUND SCAN ANIMATION SOUND 9*/
+
+.sound9 .scan {
+    animation: scan3 2s linear forwards;
+    left: auto;
+    height: 100vh;
+    width: 2px;
+    color: chartreuse;
+}
+
+@keyframes scan3 {
+    0% {
+        left: 100vw;
+        box-shadow: 0px 0px 30px 60px rgba(127, 255, 2, 0.80);
+    }
+    50% {
+        box-shadow: 0px 0px 30px 0px rgba(127, 255, 2, 0.80);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        left: 0vw;
+        box-shadow: 0px 0px 30px 60px rgba(127, 255, 2, 0.80);
+        opacity: 0;
+    }
+}
+
+
+/*----------ZINNEN-------------*/
+
+.p0 span:nth-child(2) {
+    font-family: "Brenner medium";
+    letter-spacing: 2px;
+    background-color: white;
+    color: black;
+    padding: 7px;
+}
+
+
+/*VOICE 1 TESTAFNAME----------*/
+
+.p8,
+.p10,
+.p11,
+.p13,
+.p14,
+.p16,
+.p17,
+.p19,
+.p21,
+.p22,
+.p24,
+.p25,
+.p27,
+.p28,
+.p30,
+.p32,
+.p33,
+.p35,
+.p36,
+.p38,
+.p40 {
+    font-style: italic;
+}
+
+
+/*VOICE 2 CELS----------*/
+
+.p9,
+.p12,
+.p15,
+.p18,
+.p20,
+.p23,
+.p26,
+.p29,
+.p31,
+.p34,
+.p37,
+.p41,
+.p42,
+.p43 {
+    /*    font-style: italic;*/
+}
+
+.p9 {
+    font-size: 2em;
+}
+
+.p12 {
+    font-size: 2.2em;
+    line-height: 0px
+}
+
+.p15 {
+    font-size: 2.4em;
+}
+
+.p18 {
+    font-size: 2.6em;
+}
+
+.p20 {
+    font-size: 2.8em;
+    top: 6em;
+}
+
+
+/*INTERLINKED*/
+
+.p23 {
+    font-size: 2.8em;
+    top: 5.8em;
+}
+
+.p26 {
+    font-size: 3em;
+    top: 5em;
+}
+
+.p29 {
+    font-size: 3.2em;
+    top: 4.5em;
+}
+
+.p31 {
+    font-size: 3.4em;
+    top: 4.2em;
+}
+
+.p34 {
+    font-size: 3.6em;
+    top: 3.9em;
+}
+
+.p37 {
+    font-size: 3.8em;
+    top: 3.6em;
+}
+
+.p39 {
+    font-size: 3.8em;
+    top: 4.4em;
+}
+
+
+/*Whitin cells interlinked 3x*/
+
+.p41 {
+    font-size: 3.8em;
+    top: 4.4em;
+}
+
+.p42 {
+    font-size: 4.3em;
+    font-weight: 600;
+    top: 4em;
+}
+
+.p43 {
+    font-size: 4.8em;
+    font-weight: 800;
+    top: 3.6em;
+    width: 100vw;
+}
